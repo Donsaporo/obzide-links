@@ -21,13 +21,28 @@ function App() {
   };
 
   const handleDownloadPDF = () => {
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = '/Obzide2026-Services.pdf';
-    link.download = 'Obzide 2026-Services.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Use fetch to ensure the PDF is properly downloaded
+    fetch('/Obzide2026-Services.pdf')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('PDF not found');
+        }
+        return response.blob();
+      })
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Obzide2026-Services.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        console.error('Error downloading PDF:', error);
+        alert('Error al descargar el PDF. Por favor contacta con soporte.');
+      });
   };
 
   const handleContact = () => {
