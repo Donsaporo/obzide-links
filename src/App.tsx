@@ -110,7 +110,7 @@ function App() {
               OBZIDE
             </div>
             <div className="text-xl md:text-2xl lg:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-              Tech & Supply
+              PANAMÁ
             </div>
           </h1>
         </div>
