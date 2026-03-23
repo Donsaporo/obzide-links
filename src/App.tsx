@@ -115,30 +115,34 @@ function App() {
           </h1>
 
           {/* International Presence */}
-          <div className="flex flex-col items-center gap-3 mb-8">
+          <div className="flex flex-col items-center gap-4 mb-8">
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Globe className="w-4 h-4 text-red-500" />
               <span>Presencia Internacional</span>
             </div>
-            <div className="flex flex-wrap justify-center gap-3 text-sm">
-              <div className="flex items-center gap-1.5 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700">
-                <MapPin className="w-3.5 h-3.5 text-red-500" />
-                <span className="text-gray-300">Panama</span>
-                <span className="text-xs text-gray-500 ml-1">(Oficina)</span>
+            <div className="flex items-center justify-center gap-4">
+              <div className="group flex flex-col items-center gap-2 cursor-default">
+                <div className="relative">
+                  <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block" role="img" aria-label="Panama">🇵🇦</span>
+                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                    <MapPin className="w-2.5 h-2.5 text-white" />
+                  </div>
+                </div>
+                <span className="text-[10px] text-gray-500 font-medium tracking-wide">OFICINA</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
-                <span className="text-gray-400">Costa Rica</span>
+              <div className="group flex flex-col items-center gap-2 cursor-default">
+                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Costa Rica">🇨🇷</span>
+                <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
-                <span className="text-gray-400">Uruguay</span>
+              <div className="group flex flex-col items-center gap-2 cursor-default">
+                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Uruguay">🇺🇾</span>
+                <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
-                <span className="text-gray-400">Chile</span>
+              <div className="group flex flex-col items-center gap-2 cursor-default">
+                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Chile">🇨🇱</span>
+                <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
             </div>
-            <p className="text-xs text-gray-500 text-center max-w-xs">
-              Asistencia virtual en toda Latinoamerica
-            </p>
           </div>
         </div>
 
@@ -198,9 +202,12 @@ function App() {
           <p className="text-gray-400 text-sm">
             © 2025 <span className="text-red-400 font-medium">Obzide</span> Tech & Supply. All rights reserved.
           </p>
-          <p className="text-gray-500 text-xs mt-2">
-            Panama | Costa Rica | Uruguay | Chile
-          </p>
+          <div className="flex items-center justify-center gap-3 mt-3">
+            <span className="text-xl" role="img" aria-label="Panama">🇵🇦</span>
+            <span className="text-xl" role="img" aria-label="Costa Rica">🇨🇷</span>
+            <span className="text-xl" role="img" aria-label="Uruguay">🇺🇾</span>
+            <span className="text-xl" role="img" aria-label="Chile">🇨🇱</span>
+          </div>
         </div>
       </footer>
     </div>
