@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { ExternalLink, Download, MessageCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ExternalLink, Download, MessageCircle, MapPin, Globe } from 'lucide-react';
 import LoadingScreen from './components/LoadingScreen';
 
 function App() {
@@ -105,14 +105,41 @@ function App() {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-center mb-6 leading-tight">
-            <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-              OBZIDE
+          <h1 className="text-center mb-4 leading-tight">
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              Obzide
             </div>
-            <div className="text-xl md:text-2xl lg:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">
-              Panamá
+            <div className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 mt-1">
+              Tech <span className="text-red-500">&</span> Supply
             </div>
           </h1>
+
+          {/* International Presence */}
+          <div className="flex flex-col items-center gap-3 mb-8">
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <Globe className="w-4 h-4 text-red-500" />
+              <span>Presencia Internacional</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <div className="flex items-center gap-1.5 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700">
+                <MapPin className="w-3.5 h-3.5 text-red-500" />
+                <span className="text-gray-300">Panama</span>
+                <span className="text-xs text-gray-500 ml-1">(Oficina)</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
+                <span className="text-gray-400">Costa Rica</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
+                <span className="text-gray-400">Uruguay</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-gray-800/30 px-3 py-1.5 rounded-full border border-gray-700/50">
+                <span className="text-gray-400">Chile</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 text-center max-w-xs">
+              Asistencia virtual en toda Latinoamerica
+            </p>
+          </div>
         </div>
 
         
@@ -169,7 +196,10 @@ function App() {
       <footer className="py-12 px-6 border-t border-gray-800/50">
         <div className={`text-center transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-gray-400 text-sm">
-            © 2025 <span className="text-red-400 font-medium">OBZIDE</span> – Tech & Supply. All rights reserved.
+            © 2025 <span className="text-red-400 font-medium">Obzide</span> Tech & Supply. All rights reserved.
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Panama | Costa Rica | Uruguay | Chile
           </p>
         </div>
       </footer>
