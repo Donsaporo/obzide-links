@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ExternalLink, Download, MessageCircle, MapPin, Globe } from 'lucide-react';
 import LoadingScreen from './components/LoadingScreen';
+import { PanamaFlag, CostaRicaFlag, UruguayFlag, ChileFlag } from './components/Flags';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -120,26 +121,34 @@ function App() {
               <Globe className="w-4 h-4 text-red-500" />
               <span>Presencia Internacional</span>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-5">
               <div className="group flex flex-col items-center gap-2 cursor-default">
                 <div className="relative">
-                  <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block" role="img" aria-label="Panama">🇵🇦</span>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-                    <MapPin className="w-2.5 h-2.5 text-white" />
+                  <div className="w-14 h-10 md:w-16 md:h-12 rounded-md overflow-hidden shadow-lg ring-2 ring-white/20 transition-transform duration-300 group-hover:scale-110">
+                    <PanamaFlag className="w-full h-full" />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center shadow-lg ring-2 ring-gray-900">
+                    <MapPin className="w-3 h-3 text-white" />
                   </div>
                 </div>
                 <span className="text-[10px] text-gray-500 font-medium tracking-wide">OFICINA</span>
               </div>
               <div className="group flex flex-col items-center gap-2 cursor-default">
-                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Costa Rica">🇨🇷</span>
+                <div className="w-14 h-10 md:w-16 md:h-12 rounded-md overflow-hidden shadow-lg ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110 opacity-85">
+                  <CostaRicaFlag className="w-full h-full" />
+                </div>
                 <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
               <div className="group flex flex-col items-center gap-2 cursor-default">
-                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Uruguay">🇺🇾</span>
+                <div className="w-14 h-10 md:w-16 md:h-12 rounded-md overflow-hidden shadow-lg ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110 opacity-85">
+                  <UruguayFlag className="w-full h-full" />
+                </div>
                 <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
               <div className="group flex flex-col items-center gap-2 cursor-default">
-                <span className="text-4xl md:text-5xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 inline-block opacity-80" role="img" aria-label="Chile">🇨🇱</span>
+                <div className="w-14 h-10 md:w-16 md:h-12 rounded-md overflow-hidden shadow-lg ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110 opacity-85">
+                  <ChileFlag className="w-full h-full" />
+                </div>
                 <span className="text-[10px] text-gray-600 tracking-wide">VIRTUAL</span>
               </div>
             </div>
@@ -203,10 +212,18 @@ function App() {
             © 2025 <span className="text-red-400 font-medium">Obzide</span> Tech & Supply. All rights reserved.
           </p>
           <div className="flex items-center justify-center gap-3 mt-3">
-            <span className="text-xl" role="img" aria-label="Panama">🇵🇦</span>
-            <span className="text-xl" role="img" aria-label="Costa Rica">🇨🇷</span>
-            <span className="text-xl" role="img" aria-label="Uruguay">🇺🇾</span>
-            <span className="text-xl" role="img" aria-label="Chile">🇨🇱</span>
+            <div className="w-8 h-6 rounded overflow-hidden shadow-sm">
+              <PanamaFlag className="w-full h-full" />
+            </div>
+            <div className="w-8 h-6 rounded overflow-hidden shadow-sm">
+              <CostaRicaFlag className="w-full h-full" />
+            </div>
+            <div className="w-8 h-6 rounded overflow-hidden shadow-sm">
+              <UruguayFlag className="w-full h-full" />
+            </div>
+            <div className="w-8 h-6 rounded overflow-hidden shadow-sm">
+              <ChileFlag className="w-full h-full" />
+            </div>
           </div>
         </div>
       </footer>
