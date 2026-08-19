@@ -14,7 +14,7 @@ const LINKS = [
   {
     label: 'Pagina Web Oficial',
     icon: ExternalLink,
-    action: () => window.open('https://www.obzide.com', '_blank'),
+    action: () => window.open('https://obzide.com', '_blank'),
   },
   {
     label: 'Servicios (PDF)',
