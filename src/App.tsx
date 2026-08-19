@@ -105,9 +105,6 @@ function App() {
                       </div>
                     )}
                   </div>
-                  <span className={`text-[10px] font-semibold tracking-wider uppercase ${loc.type === 'office' ? 'text-[#EC323A]/80' : 'text-white/30'}`}>
-                    {loc.type === 'office' ? 'Oficina' : 'Virtual'}
-                  </span>
                 </div>
               ))}
             </div>
